@@ -12,7 +12,7 @@
   --bg-title: #cbc0d3;
   --bg-h2: #feeafa;
 
-  --primary-color: #ffffff;
+  --prymary-color: #ffffff;
   --secondary-color: #4a4e69;
   --color-P: #23053a;
 
@@ -28,13 +28,14 @@ body {
   width: 38.4rem;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid red;
+  padding-bottom: 3rem;
 }
 
 header {
   background: var(--bg-header);
   height: 27.9rem;
   padding: 3.2rem 0 0;
+  animation: topDown 700ms;
 }
 
 header h1 {
@@ -49,4 +50,109 @@ header h1 {
   color: var(--prymary-color);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   margin-top: 1.2rem;
+}
+
+main {
+  background: var(--bg-main);
+  display: grid;
+  justify-content: center;
+  gap: 3.2rem;
+  animation: downTop 700ms;
+}
+
+main p {
+  width: 31rem;
+  margin: 1.4rem auto 3rem;
+
+  font-family: var(--ff-main);
+  font-size: 2rem;
+  line-height: 1.5rem;
+
+  color: var(--color-P);
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  position: relative;
+}
+
+.card1 img,
+.card3 img,
+.card5 img {
+  width: 32rem;
+  height: 25rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.card2 img,
+.card4 img,
+.card6 img {
+  width: 32rem;
+  height: 45rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+
+.card1 h2,
+.card2 h2,
+.card3 h2,
+.card4 h2,
+.card5 h2,
+.card6 h2 {
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  background: var(--bg-h2);
+  border-radius: 2rem;
+  width: 11.2rem;
+  animation: topDown 700ms;
+
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+
+  color: var(--secondary-color);
+}
+
+.card1 img:hover,
+.card2 img:hover,
+.card3 img:hover,
+.card4 img:hover,
+.card5 img:hover,
+.card6 img:hover {
+  transform: scale(1.1);
+  transition: 250ms;
+  opacity: 0.7;
+}
+
+@keyframes topDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downTop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
