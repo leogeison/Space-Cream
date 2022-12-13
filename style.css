@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-header: #8e9aaf;
+  --bg-main: #eff1ff;
+  --bg-title: #cbc0d3;
+  --bg-h2: #feeafa;
+
+  --primary-color: #ffffff;
+  --secondary-color: #4a4e69;
+  --color-P: #23053a;
+
+  --ff-body: 'Staatliches', cursive;
+  --ff-main: 'Palanquin', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.page {
+  width: 38.4rem;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+header {
+  background: var(--bg-header);
+  height: 27.9rem;
+  padding: 3.2rem 0 0;
+}
+
+header h1 {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  padding: 0.8rem 0;
+
+  background: var(--bg-title);
+  color: var(--prymary-color);
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 1.2rem;
+}
