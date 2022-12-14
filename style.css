@@ -18,6 +18,8 @@
 
   --ff-body: 'Staatliches', cursive;
   --ff-main: 'Palanquin', sans-serif;
+  --ff-desktop: 'Roboto', sans-serif;
+  --ff-footer: 'Open Sans', sans-serif;
 }
 
 body {
@@ -143,6 +145,18 @@ main {
 
 footer {
   display: none;
+  font-family: var(--ff-footer);
+  font-size: 1.4rem;
+  line-height: 2.8rem;
+
+  color: var(--secondary-color);
+  background: var(--bg-main);
+}
+
+footer a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 @keyframes topDown {
@@ -169,7 +183,7 @@ footer {
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 720px) {
   .textContent p {
     width: 70rem;
   }
@@ -202,3 +216,40 @@ footer {
   }
 }
 
+@media (min-width: 1450px) {
+  .page {
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    grid-template-areas:
+      'A B C'
+      'D B F'
+      'D E F';
+
+    padding: 3.4rem 3.4rem;
+  }
+  .primaryContent {
+    background: var(--bg-header);
+    max-width: 38rem;
+  }
+  .textContent {
+    padding: 0;
+  }
+  .textContent p {
+    background: var(--bg-header);
+    font-family: var(--ff-desktop);
+    font-size: 2.4rem;
+    line-height: 2rem;
+
+    padding: 3.2rem;
+
+    color: var(--primary-color);
+  }
+
+  footer {
+    display: block;
+    padding-bottom: 3.2rem;
+  }
+}
